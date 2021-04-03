@@ -1,0 +1,41 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.swiper-content {
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.swiper-slide .title {
+  @include font(6);
+  font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+  @include font(3);
+}
+
+.swiper-slide .text {
+  @include font(2);
+  line-height: 1.3;
+}
+@media screen and (min-width: 768px) {
+  .swiper-slide {
+    padding: 60px;
+  }
+  .swiper-slide .text {
+    max-width: 400px;
+  }
+}

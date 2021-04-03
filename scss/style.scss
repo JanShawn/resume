@@ -1,0 +1,451 @@
+@import "reset";
+@import "utils";
+@import "component";
+/* common */
+@import "layout";
+/* 套件 */
+@import "swiper";
+.section-title {
+  @include font(5);
+  text-transform: uppercase;
+  background: linear-gradient(to right, color(primarylist, 1), color(primarylist, 2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+/* 行動優先*/
+.header {
+  height: 70vh;
+  background: url(../images/main-banner.jpg) no-repeat center left / cover;
+
+  background-blend-mode: multiply;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+  .header-content {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 5%;
+    h1 {
+      text-indent: -9999px;
+      position: absolute;
+    }
+    .title {
+      @include font(5);
+      text-shadow: black 0.1em 0.1em 0.2em;
+      margin-bottom: 15px;
+      display: block;
+    }
+    span {
+      text-shadow: black 0.1em 0.1em 0.2em;
+      display: inline-block;
+      @include font(4);
+    }
+    .header-btn-group {
+      text-align: center;
+      margin-top: 30px;
+      :first-child {
+        margin-bottom: 15px;
+      }
+      a {
+        margin: 0 auto;
+        display: block;
+        width: 120px;
+      }
+    }
+  }
+}
+#about {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 120px 0 150px;
+  margin-top: -15vh;
+  .about-content {
+    .pic {
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: all 0.5s;
+      }
+    }
+    .intro {
+      max-width: 500px;
+      margin: 0 auto;
+      color: color(graylist, 2);
+      text-align: left;
+      .title {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        .main-title {
+          display: inline-block;
+          @include font(3);
+          font-weight: 700;
+        }
+        .sub-title {
+          @include font(3);
+          display: inline-block;
+          font-weight: 800;
+          color: color(primarylist, 3);
+        }
+      }
+      .txt {
+        line-height: 1.7;
+        text-indent: 34px;
+        display: block;
+        text-align: justify;
+        margin-bottom: 15px;
+      }
+    }
+    .about-btn-group {
+      text-align: center;
+      a {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+#skill {
+  text-align: center;
+  background: url(../images/skill-bg.jpg) no-repeat fixed center/cover;
+  padding: 120px 0;
+  transform: skewY(-7deg);
+  margin-top: -15vh;
+  .container {
+    transform: skewY(7deg);
+    h2 {
+      text-indent: -9999px;
+      position: absolute;
+    }
+  }
+  .skill-content {
+    .card {
+      perspective: 800px;
+      position: relative;
+      .card-side {
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        min-height: 350px;
+        box-shadow: 0 0 5px #2c3e50;
+        transition: all 0.8s ease;
+        backface-visibility: hidden;
+      }
+      .card-front {
+        background: rgba(255, 255, 255, 0.8);
+        transform: rotateY(180deg);
+        .pic {
+          img {
+            width: 50%;
+            vertical-align: middle;
+          }
+        }
+      }
+      .card-back {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        top: 0;
+        left: 0;
+        transform: rotateY(0deg);
+        position: absolute;
+      }
+      .card-details {
+        h3 {
+          @include font(4);
+          margin-bottom: 15px;
+        }
+        ul {
+          li {
+            @include font(3);
+            padding: 5px 0;
+            &:not(:last-child) {
+              border-bottom: 2px solid color(graylist, 2);
+            }
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+#experience {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 200px 0;
+  margin-top: -20vh;
+  .experience-content {
+    .job-list {
+      padding-left: 30px;
+      margin: 0 auto;
+      width: 80%;
+      color: color(graylist, 2);
+      text-align: left;
+      border-left: 3px solid color(primarylist, 2);
+      .job-item {
+        position: relative;
+        margin-bottom: 30px;
+        &:before {
+          position: absolute;
+          content: "";
+          outline: rgb(255, 255, 255) solid 8px;
+          background: color(primarylist, 3);
+          transition: all 0.2s ease-in;
+          top: 7px;
+          left: -37px;
+          width: 10px;
+          height: 10px;
+        }
+        .date {
+          transition: all 0.2s ease-in;
+          background: color(primarylist, 2);
+          display: inline-block;
+          color: #fff;
+          padding: 1px 5px;
+          border-radius: 2px;
+          margin-bottom: 15px;
+        }
+        .job-title {
+          @include font(3);
+          font-weight: 800;
+          margin-bottom: 10px;
+        }
+        .job-skill {
+          font-weight: 800;
+          margin-bottom: 15px;
+          &::before {
+            content: "使用技術:";
+          }
+          .skill-item {
+            display: inline-block;
+            @include font(1);
+            padding: 5px;
+            margin: 2px;
+            color: color(primarylist, 2);
+            border-radius: 5px;
+            border: 2px solid color(primarylist, 2);
+          }
+        }
+        .job-detail {
+          max-height: 130px;
+          overflow: hidden;
+          position: relative;
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: linear-gradient(rgba(255, 255, 255, 0), rgb(247, 247, 247));
+          }
+          .job-sub-title {
+            @include font(2);
+            font-weight: 800;
+            margin-bottom: 10px;
+            &:before {
+              content: "- ";
+            }
+          }
+          .job-award {
+            &:before {
+              content: "- ";
+            }
+            @include font(1);
+            color: #ff8000;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: inline-block;
+            margin-left: 10px;
+          }
+          .job-explain {
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 15px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+#works {
+  background: url(../images/work-bg.jpg) no-repeat left/cover;
+  // background: rgba(170, 170, 170, 0.2);
+  padding: 60px 0;
+  transform: skewY(-7deg);
+  margin-top: -15vh;
+  h2 {
+    text-indent: -9999px;
+    position: absolute;
+  }
+  .works-content {
+    transform: skewY(7deg);
+    // border: 1px solid red;
+  }
+  .swiper-content {
+    .pic {
+      width: 90%;
+      height: 25vh;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      background: url("https://picsum.photos/600?random=1") no-repeat center / cover;
+    }
+    .title {
+      text-align: center;
+    }
+    .subtitle {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .text {
+      text-align: justify;
+    }
+  }
+}
+/* 桌機 */
+@media screen and (min-width: 768px) {
+  body {
+    padding: 16px;
+  }
+  .btn {
+    padding: 15px 30px;
+  }
+  .container {
+    padding: 0;
+  }
+  .header {
+    height: 90vh;
+    .header-content {
+      .title {
+        @include font(6);
+      }
+      .header-btn-group {
+        text-align: center;
+        :first-child {
+          margin-right: 30px;
+          margin-bottom: 0px;
+        }
+        a {
+          float: left;
+          width: 150px;
+        }
+        &:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+    }
+  }
+  #about {
+    padding: 120px 0 200px;
+    .about-content {
+      display: flex;
+      max-width: 85%;
+      margin: 0 auto;
+      .pic {
+        margin-bottom: 0px;
+        position: relative;
+        img {
+          width: auto;
+          height: auto;
+          max-width: 35vw;
+          max-height: 100%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 5px;
+          &:hover {
+            box-shadow: 4px 4px 12px 4px rgba(20%, 20%, 40%, 0.5);
+          }
+        }
+      }
+      .intro {
+        width: 60%;
+      }
+      .about-btn-group {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+          padding: 10px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  #skill {
+    .skill-content {
+      display: flex;
+      justify-content: space-evenly;
+      .card {
+        margin-top: 0vh;
+        margin: 0 15px;
+        .card-front {
+          transform: rotateY(0deg);
+        }
+        .card-back {
+          transform: rotateY(180deg);
+        }
+        &:hover {
+          .card-front {
+            transform: rotateY(-180deg);
+          }
+          .card-back {
+            transform: rotateY(0deg);
+          }
+        }
+      }
+    }
+  }
+  #experience {
+    margin-top: -15vh;
+    .experience-content {
+      .job-list {
+        padding: 0 30px;
+        .job-item {
+          .job-detail {
+            max-height: none;
+            overflow: visible;
+            position: relative;
+            &:before {
+              background: transparent;
+            }
+            .job-explain {
+              text-indent: 34px;
+            }
+          }
+          &:hover::before {
+            transform: rotate(45deg);
+            background: #ff8000;
+          }
+          &:hover {
+            .date {
+              background: #ff8000;
+            }
+          }
+        }
+      }
+    }
+  }
+  #works {
+    padding: 120px 0 60px;
+  }
+}
