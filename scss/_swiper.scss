@@ -1,6 +1,6 @@
 .swiper-container {
   width: 100%;
-  height: 100%;
+  height: 80%;
   background: transparent;
 }
 
@@ -19,12 +19,12 @@
 }
 
 .swiper-slide .title {
-  @include font(6);
+  @include font(5);
   font-weight: 300;
 }
 
 .swiper-slide .subtitle {
-  @include font(3);
+  @include font(1);
 }
 
 .swiper-slide .text {

@@ -208,7 +208,7 @@ h2 {
 /* 套件 */
 .swiper-container {
   width: 100%;
-  height: 100%;
+  height: 80%;
   background: transparent;
 }
 
@@ -227,18 +227,18 @@ h2 {
 }
 
 .swiper-slide .title {
-  font-size: 48px;
-  font-size: 3rem;
-  line-height: 56px;
-  line-height: 3.5rem;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 40px;
+  line-height: 2.5rem;
   font-weight: 300;
 }
 
 .swiper-slide .subtitle {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 26px;
-  line-height: 1.625rem;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 20px;
+  line-height: 1.25rem;
 }
 
 .swiper-slide .text {
@@ -275,7 +275,8 @@ h2 {
 /* 行動優先*/
 .header {
   height: 70vh;
-  background: url(../images/main-banner.jpg) no-repeat center left/cover;
+  background: url(../images/main-banner.jpg) no-repeat center left;
+  background-size: cover;
   background-blend-mode: multiply;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -409,7 +410,8 @@ h2 {
 
 #skill {
   text-align: center;
-  background: url(../images/skill-bg.jpg) no-repeat fixed center/cover;
+  background: url(../images/skill-bg.jpg) no-repeat fixed center;
+  background-size: cover;
   padding: 120px 0;
   -webkit-transform: skewY(-7deg);
           transform: skewY(-7deg);
@@ -633,11 +635,14 @@ h2 {
 }
 
 #works {
-  background: url(../images/work-bg.jpg) no-repeat left/cover;
+  background: url(../images/work-bg.jpg) no-repeat left;
+  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+          clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
   padding: 60px 0;
-  -webkit-transform: skewY(-7deg);
-          transform: skewY(-7deg);
-  margin-top: -15vh;
+  margin-top: -25vh;
 }
 
 #works h2 {
@@ -645,31 +650,91 @@ h2 {
   position: absolute;
 }
 
-#works .works-content {
-  -webkit-transform: skewY(7deg);
-          transform: skewY(7deg);
+#works .swiper-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #works .swiper-content .pic {
-  width: 90%;
-  height: 25vh;
-  margin: 0 auto;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 80%;
   margin-bottom: 15px;
+}
+
+#works .swiper-content .pic a {
+  display: inline-block;
+}
+
+#works .swiper-content .pic a img {
   border-radius: 15px;
-  background: url("https://picsum.photos/600?random=1") no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
 }
 
-#works .swiper-content .title {
+#works .swiper-content .artical {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
   text-align: center;
 }
 
-#works .swiper-content .subtitle {
-  text-align: center;
+#works .swiper-content .artical .title {
   margin-bottom: 5px;
 }
 
-#works .swiper-content .text {
+#works .swiper-content .artical .subtitle {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#works .swiper-content .artical .skill {
+  color: #0353a4;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+#works .swiper-content .artical .skill .skill-item {
+  display: inline-block;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 3px;
+}
+
+#works .swiper-content .artical .text {
+  line-height: 1.7;
   text-align: justify;
+}
+
+#works .swiper-content .artical .text span {
+  display: block;
+}
+
+#contact {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 120px;
+  margin-top: -15vh;
 }
 
 /* 桌機 */
@@ -808,6 +873,61 @@ h2 {
     background: #ff8000;
   }
   #works {
-    padding: 120px 0 60px;
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  }
+  #works .swiper-slide:nth-child(even) .pic {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #works .swiper-slide .swiper-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #works .swiper-slide .swiper-content .pic {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: 30px;
+  }
+  #works .swiper-slide .swiper-content .pic:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  #works .swiper-slide .swiper-content .pic:after {
+    content: "點擊連接至GitHub";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #works .swiper-slide .swiper-content .pic:hover:before {
+    height: 0%;
+    background: transparent;
+    opacity: 1;
+  }
+  #works .swiper-slide .swiper-content .pic:hover:after {
+    content: "";
+  }
+  #works .swiper-slide .swiper-content .artical {
+    text-align: left;
+  }
+  #works .swiper-slide .swiper-content .artical .subtitle {
+    text-align: left;
   }
 }
