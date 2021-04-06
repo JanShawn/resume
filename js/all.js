@@ -11,7 +11,7 @@
   // 幻燈片
   var swiper = new Swiper(".swiper-container", {
     speed: 600,
-    loop: true,
+    loop: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

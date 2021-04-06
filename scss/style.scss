@@ -279,6 +279,31 @@
             margin-bottom: 15px;
             margin-left: 10px;
           }
+          .job-srpead {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 50%;
+            bottom: 1px;
+            background-color: color(primarylist, 2);
+            color: rgb(255, 255, 255);
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translate(-50%);
+            &:after {
+              content: "";
+              border-style: solid;
+              border-color: rgb(255, 255, 255);
+              border-width: 0px 3px 3px 0px;
+              border-bottom-right-radius: 2px;
+              padding: 4px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, calc(-50% - 2px)) rotate(45deg);
+            }
+          }
         }
       }
     }
@@ -355,8 +380,55 @@
 #contact {
   background-color: #f7f7f7;
   text-align: center;
-  padding: 120px;
+  padding-top: 120px;
+  padding-bottom: 30px;
   margin-top: -15vh;
+  .contact-content {
+    .pic {
+      display: inline-block;
+      margin: 0 auto;
+      height: 100%;
+      position: relative;
+      transition: all 0.5s;
+      img {
+        display: none;
+      }
+      .thank {
+        display: none;
+      }
+      .icon-list {
+        display: flex;
+        flex-direction: column;
+        .icon {
+          cursor: pointer;
+          border-radius: 50%;
+          margin: 5px;
+        }
+        .github,
+        .phone,
+        .gmail {
+          position: relative;
+          display: inline-block;
+          height: 100px;
+          width: 100px;
+          background: linear-gradient(to right, color(primarylist, 2), color(primarylist, 1));
+          border-radius: 50%;
+        }
+      }
+      .fa {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+.copyright {
+  color: #fff;
+  text-align: center;
+  background-color: color(primarylist, 2);
 }
 /* 桌機 */
 @media screen and (min-width: 768px) {
@@ -471,6 +543,9 @@
             .job-explain {
               text-indent: 34px;
             }
+            .job-srpead {
+              display: none;
+            }
           }
           &:hover::before {
             transform: rotate(45deg);
@@ -535,6 +610,56 @@
           text-align: left;
           .subtitle {
             text-align: left;
+          }
+        }
+      }
+    }
+  }
+  #contact {
+    .contact-content {
+      .pic {
+        display: inline-block;
+        margin: 0 auto;
+        height: 50vh;
+        position: relative;
+        img {
+          display: block;
+          height: 100%;
+        }
+        .thank {
+          display: block;
+          color: #fff;
+          padding: 6px;
+          position: absolute;
+          top: -10px;
+          left: -150px;
+          width: 170px;
+          height: 20vh;
+          text-align: left;
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+          background-color: color(primarylist, 2);
+          line-height: 1.7;
+          text-align: justify;
+        }
+
+        .icon-list {
+          .icon {
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            &:nth-child(1) {
+              top: 0px;
+              left: 200px;
+            }
+            &:nth-child(2) {
+              top: 230px;
+              left: -170px;
+            }
+            &:nth-child(3) {
+              top: 200px;
+              left: 230px;
+            }
           }
         }
       }
