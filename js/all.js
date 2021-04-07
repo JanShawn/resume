@@ -21,16 +21,27 @@
       prevEl: ".swiper-button-prev"
     }
   });
+  // 滾動效果
+  $('a[href*="#"]:not([href="#"])').click(function () {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
   // 文章展開/收合
   var spreadBtn = document.querySelectorAll('.job-spread');
   spreadBtn.forEach(btn => btn.addEventListener('click', function (e) {
     var activeSpreadEl = e.target.tagName == 'SPAN' ? e.target.parentElement : e.target;
     var arrowEl = activeSpreadEl.childNodes[1];
-    debugger;
     var activeDetailEl = activeSpreadEl.parentNode;//文章El
     var state = activeDetailEl.dataset.state;//狀態
     var coverEl = activeSpreadEl.previousElementSibling;//遮罩
-
     if (state == 'close') {
       activeSpreadEl.classList.add('job-spread-open');
       arrowEl.classList.add('arrow-open');
@@ -45,5 +56,4 @@
       activeDetailEl.dataset.state = 'close';
     }
   }));
-
 })();
