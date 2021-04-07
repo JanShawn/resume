@@ -21,4 +21,29 @@
       prevEl: ".swiper-button-prev"
     }
   });
+  // 文章展開/收合
+  var spreadBtn = document.querySelectorAll('.job-spread');
+  spreadBtn.forEach(btn => btn.addEventListener('click', function (e) {
+    var activeSpreadEl = e.target.tagName == 'SPAN' ? e.target.parentElement : e.target;
+    var arrowEl = activeSpreadEl.childNodes[1];
+    debugger;
+    var activeDetailEl = activeSpreadEl.parentNode;//文章El
+    var state = activeDetailEl.dataset.state;//狀態
+    var coverEl = activeSpreadEl.previousElementSibling;//遮罩
+
+    if (state == 'close') {
+      activeSpreadEl.classList.add('job-spread-open');
+      arrowEl.classList.add('arrow-open');
+      activeDetailEl.classList.add('job-detail-open');
+      coverEl.classList.add('job-show');
+      activeDetailEl.dataset.state = 'open';
+    } else {
+      activeSpreadEl.classList.remove('job-spread-open');
+      arrowEl.classList.remove('arrow-open');
+      activeDetailEl.classList.remove('job-detail-open');
+      coverEl.classList.remove('job-show');
+      activeDetailEl.dataset.state = 'close';
+    }
+  }));
+
 })();

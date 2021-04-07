@@ -522,7 +522,6 @@ h2 {
 
 #experience .experience-content .job-list .job-item {
   position: relative;
-  margin-bottom: 30px;
 }
 
 #experience .experience-content .job-list .job-item:before {
@@ -584,10 +583,12 @@ h2 {
   max-height: 130px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 45px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-#experience .experience-content .job-list .job-item .job-detail:before {
-  content: "";
+#experience .experience-content .job-list .job-item .job-detail .job-cover {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -596,6 +597,10 @@ h2 {
   left: 0px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#f7f7f7));
   background: linear-gradient(rgba(255, 255, 255, 0), #f7f7f7);
+}
+
+#experience .experience-content .job-list .job-item .job-detail .job-show {
+  background: transparent;
 }
 
 #experience .experience-content .job-list .job-item .job-detail .job-sub-title {
@@ -634,7 +639,7 @@ h2 {
   margin-left: 10px;
 }
 
-#experience .experience-content .job-list .job-item .job-detail .job-srpead {
+#experience .experience-content .job-list .job-item .job-detail .job-spread {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -649,7 +654,7 @@ h2 {
           transform: translate(-50%);
 }
 
-#experience .experience-content .job-list .job-item .job-detail .job-srpead:after {
+#experience .experience-content .job-list .job-item .job-detail .job-spread .arrow {
   content: "";
   border-style: solid;
   border-color: white;
@@ -661,6 +666,20 @@ h2 {
   left: 50%;
   -webkit-transform: translate(-50%, calc(-50% - 2px)) rotate(45deg);
           transform: translate(-50%, calc(-50% - 2px)) rotate(45deg);
+}
+
+#experience .experience-content .job-list .job-item .job-detail .job-spread .arrow-open {
+  -webkit-transform: translate(-50%, calc(-50%)) rotate(-135deg);
+          transform: translate(-50%, calc(-50%)) rotate(-135deg);
+}
+
+#experience .experience-content .job-list .job-item .job-detail .job-spread-open {
+  bottom: -30px;
+}
+
+#experience .experience-content .job-list .job-item .job-detail-open {
+  max-height: none;
+  overflow: visible;
 }
 
 #works {
@@ -781,7 +800,8 @@ h2 {
 }
 
 #contact .contact-content .pic .thank {
-  display: none;
+  color: #0466c8;
+  margin-bottom: 15px;
 }
 
 #contact .contact-content .pic .icon-list {
@@ -803,6 +823,8 @@ h2 {
 #contact .contact-content .pic .icon-list .github,
 #contact .contact-content .pic .icon-list .phone,
 #contact .contact-content .pic .icon-list .gmail {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   position: relative;
   display: inline-block;
   height: 100px;
@@ -948,13 +970,13 @@ h2 {
     overflow: visible;
     position: relative;
   }
-  #experience .experience-content .job-list .job-item .job-detail:before {
+  #experience .experience-content .job-list .job-item .job-detail .job-cover {
     background: transparent;
   }
   #experience .experience-content .job-list .job-item .job-detail .job-explain {
     text-indent: 34px;
   }
-  #experience .experience-content .job-list .job-item .job-detail .job-srpead {
+  #experience .experience-content .job-list .job-item .job-detail .job-spread {
     display: none;
   }
   #experience .experience-content .job-list .job-item:hover::before {
@@ -1026,7 +1048,7 @@ h2 {
   #contact .contact-content .pic {
     display: inline-block;
     margin: 0 auto;
-    height: 50vh;
+    height: 350px;
     position: relative;
   }
   #contact .contact-content .pic img {
@@ -1041,7 +1063,7 @@ h2 {
     top: -10px;
     left: -150px;
     width: 170px;
-    height: 20vh;
+    height: 160px;
     text-align: left;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
             clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
@@ -1066,5 +1088,77 @@ h2 {
   #contact .contact-content .pic .icon-list .icon:nth-child(3) {
     top: 200px;
     left: 230px;
+  }
+  #contact .contact-content .pic .icon-list .icon .github:hover {
+    background: #0466c8;
+    height: 140px;
+    width: 140px;
+  }
+  #contact .contact-content .pic .icon-list .icon .github:hover::before {
+    content: "GitHub";
+    color: white;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 20%;
+  }
+  #contact .contact-content .pic .icon-list .icon .github:hover::after {
+    content: "JanShawn";
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 30px;
+  }
+  #contact .contact-content .pic .icon-list .icon .phone:hover {
+    background: #0466c8;
+    height: 140px;
+    width: 140px;
+  }
+  #contact .contact-content .pic .icon-list .icon .phone:hover::before {
+    content: "Phone";
+    color: white;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 20%;
+  }
+  #contact .contact-content .pic .icon-list .icon .phone:hover::after {
+    content: "0976699057";
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 30px;
+  }
+  #contact .contact-content .pic .icon-list .icon .gmail:hover {
+    background: #0466c8;
+    height: 150px;
+    width: 150px;
+  }
+  #contact .contact-content .pic .icon-list .icon .gmail:hover::before {
+    content: "Gmail";
+    color: white;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 20%;
+  }
+  #contact .contact-content .pic .icon-list .icon .gmail:hover::after {
+    content: "janshawns@gmail.com";
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 30px;
   }
 }
