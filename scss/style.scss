@@ -35,12 +35,12 @@
     }
     .title {
       @include font(5);
-      text-shadow: black 0.1em 0.1em 0.2em;
+      text-shadow: rgba(0, 0, 0, 0.6) 0.1em 0.1em 0.2em;
       margin-bottom: 15px;
       display: block;
     }
     span {
-      text-shadow: black 0.1em 0.1em 0.2em;
+      text-shadow: rgba(0, 0, 0, 0.6) 0.1em 0.1em 0.2em;
       display: inline-block;
       @include font(4);
     }
@@ -119,10 +119,10 @@
   background: url(../images/skill-bg.jpg) no-repeat fixed center;
   background-size: cover;
   padding: 120px 0;
-  transform: skewY(-7deg);
+  transform: skewY(-4deg);
   margin-top: -15vh;
   .container {
-    transform: skewY(7deg);
+    transform: skewY(4deg);
     h2 {
       text-indent: -9999px;
       position: absolute;
@@ -406,6 +406,10 @@
       img {
         display: none;
       }
+      .remark {
+        display: none;
+        color: color(graylist, 2);
+      }
       .thank {
         color: color(primarylist, 2);
         margin-bottom: 15px;
@@ -641,15 +645,18 @@
           display: block;
           height: 100%;
         }
+        .remark {
+          display: block;
+        }
         .thank {
           display: block;
           color: #fff;
           padding: 6px;
           position: absolute;
-          top: -10px;
-          left: -150px;
+          top: -20px;
+          left: -190px;
           width: 170px;
-          height: 160px;
+          height: 190px;
           text-align: left;
           clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
           background-color: color(primarylist, 2);
@@ -665,7 +672,7 @@
             position: absolute;
             &:nth-child(1) {
               top: 0px;
-              left: 200px;
+              left: 160px;
             }
             &:nth-child(2) {
               top: 230px;
@@ -673,7 +680,7 @@
             }
             &:nth-child(3) {
               top: 200px;
-              left: 230px;
+              left: 200px;
             }
             .github:hover {
               background: color(primarylist, 2);

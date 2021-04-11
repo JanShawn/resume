@@ -303,13 +303,13 @@ h2 {
   font-size: 2rem;
   line-height: 40px;
   line-height: 2.5rem;
-  text-shadow: black 0.1em 0.1em 0.2em;
+  text-shadow: rgba(0, 0, 0, 0.6) 0.1em 0.1em 0.2em;
   margin-bottom: 15px;
   display: block;
 }
 
 .header .header-content span {
-  text-shadow: black 0.1em 0.1em 0.2em;
+  text-shadow: rgba(0, 0, 0, 0.6) 0.1em 0.1em 0.2em;
   display: inline-block;
   font-size: 24px;
   font-size: 1.5rem;
@@ -413,14 +413,14 @@ h2 {
   background: url(../images/skill-bg.jpg) no-repeat fixed center;
   background-size: cover;
   padding: 120px 0;
-  -webkit-transform: skewY(-7deg);
-          transform: skewY(-7deg);
+  -webkit-transform: skewY(-4deg);
+          transform: skewY(-4deg);
   margin-top: -15vh;
 }
 
 #skill .container {
-  -webkit-transform: skewY(7deg);
-          transform: skewY(7deg);
+  -webkit-transform: skewY(4deg);
+          transform: skewY(4deg);
 }
 
 #skill .container h2 {
@@ -799,6 +799,11 @@ h2 {
   display: none;
 }
 
+#contact .contact-content .pic .remark {
+  display: none;
+  color: #777777;
+}
+
 #contact .contact-content .pic .thank {
   color: #0466c8;
   margin-bottom: 15px;
@@ -1055,15 +1060,18 @@ h2 {
     display: block;
     height: 100%;
   }
+  #contact .contact-content .pic .remark {
+    display: block;
+  }
   #contact .contact-content .pic .thank {
     display: block;
     color: #fff;
     padding: 6px;
     position: absolute;
-    top: -10px;
-    left: -150px;
+    top: -20px;
+    left: -190px;
     width: 170px;
-    height: 160px;
+    height: 190px;
     text-align: left;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
             clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
@@ -1079,7 +1087,7 @@ h2 {
   }
   #contact .contact-content .pic .icon-list .icon:nth-child(1) {
     top: 0px;
-    left: 200px;
+    left: 160px;
   }
   #contact .contact-content .pic .icon-list .icon:nth-child(2) {
     top: 230px;
@@ -1087,7 +1095,7 @@ h2 {
   }
   #contact .contact-content .pic .icon-list .icon:nth-child(3) {
     top: 200px;
-    left: 230px;
+    left: 200px;
   }
   #contact .contact-content .pic .icon-list .icon .github:hover {
     background: #0466c8;
