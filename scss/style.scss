@@ -62,7 +62,7 @@
   background-color: #f7f7f7;
   text-align: center;
   padding: 120px 0 150px;
-  margin-top: -15vh;
+  margin-top: -110px;
   .about-content {
     .pic {
       width: 60%;
@@ -120,7 +120,7 @@
   background-size: cover;
   padding: 120px 0;
   transform: skewY(-4deg);
-  margin-top: -15vh;
+  margin-top: -100px;
   .container {
     transform: skewY(4deg);
     h2 {
@@ -187,7 +187,7 @@
   background-color: #f7f7f7;
   text-align: center;
   padding: 200px 0;
-  margin-top: -20vh;
+  margin-top: -130px;
   .experience-content {
     .job-list {
       padding-left: 30px;
@@ -265,7 +265,7 @@
               content: "- ";
             }
           }
-          .job-award {
+          .job-addition {
             &:before {
               content: "- ";
             }
@@ -329,7 +329,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: multiply; // 設置背景混和模式為相乘模式
   padding: 60px 0;
-  margin-top: -25vh;
+  margin-top: -170px;
   h2 {
     text-indent: -9999px;
     position: absolute;
@@ -393,9 +393,9 @@
 #contact {
   background-color: #f7f7f7;
   text-align: center;
-  padding-top: 120px;
+  padding-top: 140px;
   padding-bottom: 30px;
-  margin-top: -15vh;
+  margin-top: -120px;
   .contact-content {
     .pic {
       display: inline-block;
@@ -430,7 +430,7 @@
           display: inline-block;
           height: 100px;
           width: 100px;
-          background: linear-gradient(to right, color(primarylist, 2), color(primarylist, 1));
+          background: linear-gradient(to left, color(primarylist, 2), color(primarylist, 1));
           border-radius: 50%;
         }
       }
@@ -445,14 +445,15 @@
   }
 }
 .copyright {
-  color: #fff;
+  margin-top: 20px;
+  background-color: #f7f7f7;
+  color: color(graylist, 2);
   text-align: center;
-  background-color: color(primarylist, 2);
 }
 /* 桌機 */
 @media screen and (min-width: 768px) {
   body {
-    padding: 16px;
+    padding: 35px;
   }
   .btn {
     padding: 15px 30px;
@@ -461,7 +462,9 @@
     padding: 0;
   }
   .header {
-    height: 90vh;
+    height: 80vh;
+    border: 2px solid color(graylist, 2);
+    border-bottom: none;
     .header-content {
       .title {
         @include font(6);
@@ -486,6 +489,8 @@
   }
   #about {
     padding: 120px 0 200px;
+    border: 2px solid color(graylist, 2);
+    border-width: 0 2px 0px 2px;
     .about-content {
       display: flex;
       max-width: 85%;
@@ -523,6 +528,8 @@
     }
   }
   #skill {
+    border: 2px solid color(graylist, 2);
+    border-width: 0 2px 0px 2px;
     .skill-content {
       display: flex;
       justify-content: space-evenly;
@@ -547,7 +554,9 @@
     }
   }
   #experience {
-    margin-top: -15vh;
+    margin-top: -100px;
+    border: 2px solid color(graylist, 2);
+    border-width: 0 2px 0px 2px;
     .experience-content {
       .job-list {
         padding: 0 30px;
@@ -580,6 +589,8 @@
     }
   }
   #works {
+    border: 2px solid color(graylist, 2);
+    border-width: 0 2px 0px 2px;
     clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
     .swiper-slide {
       &:nth-child(even) {
@@ -635,6 +646,8 @@
     }
   }
   #contact {
+    border: 2px solid color(graylist, 2);
+    border-width: 0 2px 2px 2px;
     .contact-content {
       .pic {
         display: inline-block;

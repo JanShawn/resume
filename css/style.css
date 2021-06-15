@@ -336,7 +336,7 @@ h2 {
   background-color: #f7f7f7;
   text-align: center;
   padding: 120px 0 150px;
-  margin-top: -15vh;
+  margin-top: -110px;
 }
 
 #about .about-content .pic {
@@ -415,7 +415,7 @@ h2 {
   padding: 120px 0;
   -webkit-transform: skewY(-4deg);
           transform: skewY(-4deg);
-  margin-top: -15vh;
+  margin-top: -100px;
 }
 
 #skill .container {
@@ -508,7 +508,7 @@ h2 {
   background-color: #f7f7f7;
   text-align: center;
   padding: 200px 0;
-  margin-top: -20vh;
+  margin-top: -130px;
 }
 
 #experience .experience-content .job-list {
@@ -616,7 +616,7 @@ h2 {
   content: "- ";
 }
 
-#experience .experience-content .job-list .job-item .job-detail .job-award {
+#experience .experience-content .job-list .job-item .job-detail .job-addition {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 20px;
@@ -628,7 +628,7 @@ h2 {
   margin-left: 10px;
 }
 
-#experience .experience-content .job-list .job-item .job-detail .job-award:before {
+#experience .experience-content .job-list .job-item .job-detail .job-addition:before {
   content: "- ";
 }
 
@@ -690,7 +690,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   padding: 60px 0;
-  margin-top: -25vh;
+  margin-top: -170px;
 }
 
 #works h2 {
@@ -781,9 +781,9 @@ h2 {
 #contact {
   background-color: #f7f7f7;
   text-align: center;
-  padding-top: 120px;
+  padding-top: 140px;
   padding-bottom: 30px;
-  margin-top: -15vh;
+  margin-top: -120px;
 }
 
 #contact .contact-content .pic {
@@ -834,8 +834,8 @@ h2 {
   display: inline-block;
   height: 100px;
   width: 100px;
-  background: -webkit-gradient(linear, left top, right top, from(#0466c8), to(#e7ecef));
-  background: linear-gradient(to right, #0466c8, #e7ecef);
+  background: -webkit-gradient(linear, right top, left top, from(#0466c8), to(#e7ecef));
+  background: linear-gradient(to left, #0466c8, #e7ecef);
   border-radius: 50%;
 }
 
@@ -849,15 +849,16 @@ h2 {
 }
 
 .copyright {
-  color: #fff;
+  margin-top: 20px;
+  background-color: #f7f7f7;
+  color: #777777;
   text-align: center;
-  background-color: #0466c8;
 }
 
 /* 桌機 */
 @media screen and (min-width: 768px) {
   body {
-    padding: 16px;
+    padding: 35px;
   }
   .btn {
     padding: 15px 30px;
@@ -866,7 +867,9 @@ h2 {
     padding: 0;
   }
   .header {
-    height: 90vh;
+    height: 80vh;
+    border: 2px solid #777777;
+    border-bottom: none;
   }
   .header .header-content .title {
     font-size: 48px;
@@ -892,6 +895,8 @@ h2 {
   }
   #about {
     padding: 120px 0 200px;
+    border: 2px solid #777777;
+    border-width: 0 2px 0px 2px;
   }
   #about .about-content {
     display: -webkit-box;
@@ -936,6 +941,10 @@ h2 {
     padding: 10px;
     margin-bottom: 0px;
   }
+  #skill {
+    border: 2px solid #777777;
+    border-width: 0 2px 0px 2px;
+  }
   #skill .skill-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -965,7 +974,9 @@ h2 {
             transform: rotateY(0deg);
   }
   #experience {
-    margin-top: -15vh;
+    margin-top: -100px;
+    border: 2px solid #777777;
+    border-width: 0 2px 0px 2px;
   }
   #experience .experience-content .job-list {
     padding: 0 30px;
@@ -993,6 +1004,8 @@ h2 {
     background: #ff8000;
   }
   #works {
+    border: 2px solid #777777;
+    border-width: 0 2px 0px 2px;
     -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
             clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
   }
@@ -1049,6 +1062,10 @@ h2 {
   }
   #works .swiper-slide .swiper-content .artical .subtitle {
     text-align: left;
+  }
+  #contact {
+    border: 2px solid #777777;
+    border-width: 0 2px 2px 2px;
   }
   #contact .contact-content .pic {
     display: inline-block;
