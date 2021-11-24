@@ -7,7 +7,6 @@
   <title>Shawn's Resume</title>
   <!-- CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://use.fontawesome.com/d473678598.js"></script>
@@ -15,7 +14,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XS877JM7ZY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-XS877JM7ZY');
   </script>
@@ -221,86 +220,84 @@
     <h2><span class="section-title">works</span></h2>
     <div class="works-content">
       <div class="swiper-container">
-        <!-- <div class="parallax-bg" style="background-image:url(../images/work-bg.jpg)" data-swiper-parallax="-5%"></div> -->
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="swiper-content">
-              <div class="pic">
-                <a href="https://github.com/JanShawn/todoList" target="_blank">
-                  <img src="./images/todolist.png">
-                </a>
-              </div>
-              <div class="artical">
-                <h3 class="title">todoList</h3>
-                <div class="subtitle">代辦事項清單</div>
-                <div class="skill">
-                  <span class="skill-item">JavaScript</span>
-                  <span class="skill-item">Bootstrap</span>
-                  <span class="skill-item">date&time picker</span>
-                  <span class="skill-item">localStorage</span>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-content">
+                <div class="pic">
+                  <a href="https://github.com/JanShawn/todoList" target="_blank">
+                    <img src="./images/todolist.png">
+                  </a>
                 </div>
-                <p class="text">
-                  使用原生JS手刻的，未使用框架，作品加入自己的想法，想知道事情的「重要性」以及「緊急程度」，也有Icon圖示輔助。
-                  <span>1.事情分類篩選</span>
-                  <span>2.時間即時倒數計時</span>
-                  <span>3.使用localStorage，重新整理不消失</span>
-                </p>
+                <div class="artical">
+                  <h3 class="title">todoList</h3>
+                  <div class="subtitle">代辦事項清單</div>
+                  <div class="skill">
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">Bootstrap</span>
+                    <span class="skill-item">date&time picker</span>
+                    <span class="skill-item">localStorage</span>
+                  </div>
+                  <p class="text">
+                    使用原生JS手刻的，未使用框架，作品加入自己的想法，想知道事情的「重要性」以及「緊急程度」，也有Icon圖示輔助。
+                    <span>1.事情分類篩選</span>
+                    <span>2.時間即時倒數計時</span>
+                    <span>3.使用localStorage，重新整理不消失</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-content">
+                <div class="pic">
+                  <a href="https://github.com/JanShawn/resume" target="_blank">
+                    <img src="./images/resume.png">
+                  </a>
+                </div>
+                <div class="artical">
+                  <h3 class="title">一頁式個人履歷網站</h3>
+                  <div class="subtitle">shawn's Resume</div>
+                  <div class="skill">
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">SCSS</span>
+                    <span class="skill-item">RWD</span>
+                    <span class="skill-item">jQuery</span>
+                    <span class="skill-item">type.js</span>
+                    <span class="skill-item">swiper</span>
+                  </div>
+                  <p class="text">
+                    此為手刻個人履歷表網站，手機和電腦變版過程中做了不少處理，在電腦版中更設計了不少互動的元件，以及整體引入了一些插件使網站更加豐富。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-content">
+                <div class="pic">
+                  <a href="https://github.com/JanShawn/commerce" target="_blank">
+                    <img src="./images/commerce.png">
+                  </a>
+                </div>
+                <div class="artical">
+                  <h3 class="title">一頁式電商網站</h3>
+                  <div class="subtitle">日沐電玩</div>
+                  <div class="skill">
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">SCSS</span>
+                    <span class="skill-item">RWD</span>
+                  </div>
+                  <p class="text">
+                    此專案在練習最常見的電商網站和版型，並第一次使用SCSS來製作，也手刻了「格線系統」，嘗試運用了scss的功能，像是extend、mixin、function等等。
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="swiper-content">
-              <div class="pic">
-                <a href="https://github.com/JanShawn/commerce" target="_blank">
-                  <img src="./images/commerce.png">
-                </a>
-              </div>
-              <div class="artical">
-                <h3 class="title">一頁式電商網站</h3>
-                <div class="subtitle">日沐電玩</div>
-                <div class="skill">
-                  <span class="skill-item">JavaScript</span>
-                  <span class="skill-item">SCSS</span>
-                  <span class="skill-item">RWD</span>
-                </div>
-                <p class="text">
-                  此專案在練習最常見的電商網站和版型，並第一次使用SCSS來製作，也手刻了「格線系統」，嘗試運用了scss的功能，像是extend、mixin、function等等。
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="swiper-content">
-              <div class="pic">
-                <a href="https://github.com/JanShawn/resume" target="_blank">
-                  <img src="./images/resume.png">
-                </a>
-              </div>
-              <div class="artical">
-                <h3 class="title">一頁式個人履歷網站</h3>
-                <div class="subtitle">shawn's Resume</div>
-                <div class="skill">
-                  <span class="skill-item">JavaScript</span>
-                  <span class="skill-item">SCSS</span>
-                  <span class="skill-item">RWD</span>
-                  <span class="skill-item">jQuery</span>
-                  <span class="skill-item">type.js</span>
-                  <span class="skill-item">swiper</span>
-                </div>
-                <p class="text">
-                  此為手刻個人履歷表網站，手機和電腦變版過程中做了不少處理，在電腦版中更設計了不少互動的元件，以及整體引入了一些插件使網站更加豐富。
-                </p>
-              </div>
-            </div>
-          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-white"></div>
-        <!-- Add Navigation -->
-        <div class="swiper-button-prev swiper-button-white"></div>
-        <div class="swiper-button-next swiper-button-white"></div>
       </div>
-    </div>
   </section>
   <section id="contact">
     <div class="container">
@@ -340,9 +337,7 @@
   <!-- script -->
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/typed.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <script src="js/all.js"></script>
 </body>
 </html>

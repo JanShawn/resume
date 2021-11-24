@@ -9,17 +9,31 @@
     loop: true
   });
   // 幻燈片
-  var swiper = new Swiper(".swiper-container", {
-    speed: 600,
-    loop: false,
+  // var swiper = new Swiper(".swiper-container", {
+  //   speed: 600,
+  //   loop: false,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev"
+  //   }
+  // });
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
+      prevEl: ".swiper-button-prev",
+    },
   });
   // 滾動效果
   $('a[href*="#"]:not([href="#"])').click(function () {
